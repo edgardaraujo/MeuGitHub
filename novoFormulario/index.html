@@ -1,0 +1,1052 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário websvpa</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/svpaFormulario.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<nav class="navbar navbar-default box" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Formulário websvpa</a>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid">
+		<div class="row">
+			<div class="form-group col-md-2">
+				<button class="btn btn-primary box" id="svpaWebSubmit">Enviar</button>
+				<button class="btn btn-default box" id="svpaWebReset">Cancelar</button>
+			</div>
+		</div>
+</div>
+
+<div class="container-fluid">
+		
+        <div role="tabpanel">
+
+            <ul class="nav nav-tabs " role="tablist" id="svpaWebTab">
+                <li role="presentation" class="active"><a href="#laudo" class="backTab" aria-controls="laudo" role="tab" data-toggle="tab" id="svpaWebLaudoTab">Laudo</a></li>
+                <li role="presentation"><a href="#proponente" class="backTab" aria-controls="proponente" role="tab" data-toggle="tab" id="svpaWebProponenteTab">Proponente</a></li>
+                <li role="presentation"><a href="#veiculo" class="backTab" aria-controls="veiculo" role="tab" data-toggle="tab" id="svpaWebVeiculoTab">Veículo</a></li>
+                <li role="presentation"><a href="#vistoria" class="backTab" aria-controls="vistoria" role="tab" data-toggle="tab" id="svpaWebVistoriaTab">Vistoria</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="laudo">
+
+                    <div class="panel panel-warning box">
+                        <div class="panel-heading">
+                            Número laudo vistoria: 9999999
+                        </div>
+
+                        <div class="panel-body back">
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebStatusDiv">
+                                    <label for="svpaWebStatus">Status online*</label>
+                                    <select class="form-control" id="svpaWebStatus" name="svpaWebStatus">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebRealizadaDiv">
+                                    <label for="svpaWebRealizada">Indicativo da vistoria*</label>
+                                    <select class="form-control" id="svpaWebRealizada" name="svpaWebRealizada">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Realizada</option>
+                                        <option value="2">Cancelada</option>
+                                        <option value="3">Frustada</option>
+                                        <option value="4">Reagendada</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebDataRealizacaoDiv">
+                                    <label for="svpaWebDataRealizacao">Data de realização*</label>
+                                    <input type="date" class="form-control" id="svpaWebDataRealizacao" name="svpaWebDataRealizacao" placeholder="dd/mm/aaaa" maxlength="10">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebHoraRealizacaoDiv">
+                                    <label for="svpaWebHoraRealizacao">Hora de realização*</label>
+                                    <input type="time" class="form-control" id="svpaWebHoraRealizacao" name="svpaWebHoraRealizacao" placeholder="hh:mm" maxlength="5">
+                                </div>
+								
+								 <div class="form-group col-md-2" id="svpaWebDataDigitacaoDiv">
+                                    <label for="svpaWebDataDigitacao">Data da digitação*</label>
+                                    <input type="date" class="form-control" id="svpaWebDataDigitacao" name="svpaWebDataDigitacao" placeholder="dd/mm/aaaa" maxlength="10">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebHoraDigitacaoDiv">
+                                    <label for="svpaWebHoraDigitacao">Hora da digitação*</label>
+                                    <input type="time" class="form-control" id="svpaWebHoraDigitacao" name="svpaWebHoraDigitacao" placeholder="hh:mm" maxlength="5">
+                                </div>
+                            </div>
+
+                            <div class="row">
+							
+								
+                                <div class="form-group col-md-2" id="svpaWebNumSolicitacaoDiv">
+                                    <label for="svpaWebNumSolicitacao">Número da solicitação</label>
+                                    <input type="number" class="form-control" id="svpaWebNumSolicitacao" name="svpaWebNumSolicitacao" placeholder="Digite" maxlength="12">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebIdSeguradoraDiv">
+		
+                                    <label for="svpaWebIdSeguradora">Código da seguradora*</label>
+                                    <select class="form-control" id="svpaWebIdSeguradora" name="svpaWebIdSeguradora">
+                                        <option value="">Escolha</option>
+                                        <option value="9210-ABV">ABV</option>
+                                        <option value="9180-ACTION">ACTION</option>
+                                        <option value="9110-AGIL">AGIL</option>
+                                        <option value="9200-AGS">AGS</option>
+                                        <option value="8738-ALFA">ALFA</option>
+                                        <option value="5177-ALLIANZ_AGF">ALLIANZ (AGF)</option>
+                                        <option value="9220-APOIO_CAR">APOIO CAR</option>
+                                        <option value="9300-APPROVEL">APPROVEL</option>
+                                        <option value="9160-APV_MUTUA">APV MÚTUA</option>
+                                        <option value="9230-APVA">APVA</option>
+                                        <option value="9160-ASCOBOM">ASCOBOM</option>
+                                        <option value="9000-ASPEM VERTICE">ASPEM (VÉRTICE)</option>
+                                        <option value="9160-ASPROCAR">ASPROCAR</option>
+                                        <option value="9160-ASTEP">ASTEP</option>
+                                        <option value="9240-ATEP">ATEP</option>
+                                        <option value="9160-AUTO_VALOR">AUTO VALOR</option>
+                                        <option value="9250-AUTOTRUCK">AUTOTRUCK</option>
+                                        <option value="6230-BB_MAPFRE">BB MAPFRE</option>
+                                        <option value="9160-BOM_SUCESSO">BOM SUCESSO</option>
+                                        <option value="5444-BRADESCO">BRADESCO</option>
+                                        <option value="5244-CAIXA">CAIXA</option>
+                                        <option value="0999-CANCELADO">CANCELADO</option>
+                                        <option value="9160-CLUBE_DE_BENEFICIOS_APROVE">CLUBE DE BENEFÍCIOS APROVE</option>
+                                        <option value="9020-COM_CARGA">COM CARGA</option>
+                                        <option value="9160-COOMPLETA">COOMPLETA</option>
+                                        <option value="9160-COPA_190">COPA 190</option>
+                                        <option value="9260-COPERCAR">COPERCAR</option>
+                                        <option value="9320-CRED_CAR">CRED CAR</option>
+                                        <option value="9160-EFICAZ">EFICAZ</option>
+                                        <option value="9070-FACILITY">FACILITY</option>
+                                        <option value="9170-FONFONCLUBE">FONFONCLUBE</option>
+                                        <option value="5908-GENERALI">GENERALI</option>
+                                        <option value="9190-GENESIS">GENESIS</option>
+                                        <option value="6573-HDI">HDI</option>
+                                        <option value="9160-LIDERCAR">LIDERCAR</option>
+                                        <option value="6238-MAPFRE">MAPFRE</option>
+                                        <option value="5720-MARITIMA">MARÍTIMA</option>
+                                        <option value="8970-MASTTERCAR">MASTTERCAR</option>
+                                        <option value="9130-MEGA">MEGA</option>
+                                        <option value="9060-PREV_CAR">PREV CAR</option>
+                                        <option value="9160-PREVTRUCK_QUINTAO">PREVTRUCK (QUINTAO)</option>
+                                        <option value="9160-PRIME">PRIME</option>
+                                        <option value="9160-PRO_ALTO">PRO ALTO</option>
+                                        <option value="9330-PROT RIO">PROT RIO</option>
+                                        <option value="9270-PROTECAO BRASIL">PROTECAO BRASIL</option>
+                                        <option value="1010-QGMAYDAY">QGMAYDAY</option>
+                                        <option value="9160-QUINTAO_PREVTRUCK">QUINTAO (PREVTRUCK)</option>
+                                        <option value="9310-RBK">RBK</option>
+                                        <option value="9280-RODOSAT">RODOSAT</option>
+                                        <option value="6751-RSA (ROYAL &amp; SUN ALLIANCE)">RSA (ROYAL &amp; SUN ALLIANCE)</option>
+                                        <option value="9160-SEGURYCAR">SEGURYCAR</option>
+                                        <option value="5240-SUL_AMERICA">SUL AMÉRICA</option>
+                                        <option value="5916-TOKIO_MARINE">TOKIO MARINE</option>
+                                        <option value="9150-TRUST">TRUST</option>
+                                        <option value="9160-UNIBEM">UNIBEM</option>
+                                        <option value="9140-UNIBRAS_AUTO">UNIBRAS AUTO</option>
+                                        <option value="9290-UNIDOS">UNIDOS</option>
+                                        <option value="9040-UNIF">UNIF</option>
+                                        <option value="0991-UNIPROPAS">UNIPROPAS</option>
+                                        <option value="9160-VALU">VALU</option>
+                                        <option value="6203-ZURICH">ZURICH</option>
+                                        <option value="OUTRAS">OUTRAS(ESPECIFICAR NA OBSERVAÇÃO)</option>
+                                    </select>
+                                    <!--vide tabela-->
+                                </div>
+								
+                                <div class="form-group col-md-2" id="svpaWebSucursalDiv">
+                                    <label for="svpaWebSucursal">Sucursal da seguradora</label>
+                                    <input type="text" class="form-control" id="svpaWebSucursal" name="svpaWebSucursal" placeholder="Digite" maxlength="10">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebSusepDiv">
+                                    <label for="svpaWebSusep">Código SUSEP do corretor</label>
+                                    <input type="text" class="form-control" id="svpaWebSusep" name="svpaWebSusep" placeholder="Digite" maxlength="14">
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebCorretorDiv">
+                                    <label for="svpaWebCorretor">Nome corretor / corretora*</label>
+                                    <input type="text" class="form-control" id="svpaWebCorretor" name="svpaWebCorretor" placeholder="Digite" maxlength="60">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebCodCorretorDiv">
+                                    <label for="svpaWebCodCorretor">Código do corretor na CIA</label>
+                                    <input type="number" class="form-control" id="svpaWebCodCorretor" name="svpaWebCodCorretor" placeholder="Digite" maxlength="15">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebIdMotivoDiv">
+                                    <label for="svpaWebIdMotivo">Código motivo da vistoria*</label>
+                                    <select class="form-control" id="svpaWebIdMotivo" name="svpaWebRealizada">
+                                        <option value="">Escolha</option>
+                                        <option value="A">ALTERAÇÃO DE FRANQUIA</option>
+                                        <option value="C">AMPLIAÇÃO DE COBERTURA</option>
+                                        <option value="D">AUMENTO DE IMPORTÂNCIA SEGURADA</option>
+                                        <option value="E">CONSÓRCIO AVALIAÇÃO DE BEM</option>
+                                        <option value="G">CONSÓRCIO SUBSTITUIÇÃO DE GARANTIA</option>
+                                        <!--<option value="7">CONSTATAÇÃO DE SINISTRO</option>-->
+                                        <option value="4">EXCLUSÃO DE AVARIAS</option>
+                                        <option value="5">INCLUSÃO DE ACESSÓRIOS</option>
+                                        <option value="9">OUTROS</option>
+                                        <option value="2">PAGTO DE CARNÊ - (PARCELA VENCIDA)</option>
+                                        <option value="6">RENOVAÇÃO DA PRÓPRIA SEGURADORA</option>
+                                        <option value="8">RENOVAÇÃO DE OUTRA CIA</option>
+                                        <option value="1">SEGURO NOVO</option>
+                                        <option value="3">SUBSTITUIÇÃO DE VEÍCULO (ENDOSSO)</option>
+                                        <option value="B">SUPERVISÃO</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-8" id="svpaWebMotivoDiv">
+                                    <label for="svpaWebMotivo">Descrição do motivo*</label>
+                                    <input type="text" class="form-control" id="svpaWebMotivo" name="svpaWebMotivo" placeholder="Digite" maxlength="40">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-4" id="svpaWebApoliceDiv">
+                                    <label for="svpaWebApolice">Número da apólice de seguro</label>
+                                    <input type="text" class="form-control" id="svpaWebApolice" name="svpaWebApolice" placeholder="Digite" maxlength="30">
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebCodAgendamentoDiv">
+                                    <label for="svpaWebCodAgendamento">Código do agendamento</label>
+                                    <input type="text" class="form-control" id="svpaWebCodAgendamento" name="svpaWebCodAgendamento" placeholder="Digite" maxlength="25">
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebSenhaDiv">
+                                    <label for="svpaWebSenha">Senha para vistoria</label>
+                                    <input type="text" class="form-control" id="svpaWebSenha" name="svpaWebSenha" placeholder="Digite" maxlength="25">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="proponente">
+
+                    <div class="panel panel-default box">
+                        <div class="panel-heading">Proponente</div>
+
+                        <div class="panel-body back02">
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebTipoPessoaDiv">
+                                    <label for="svpaWebTipoPessoa">Tipo pessoa*</label>
+                                    <select class="form-control" id="svpaWebTipoPessoa" name="svpaWebTipoPessoa">
+                                        <option value="">Escolha</option>
+                                        <option value="F">Física</option>
+                                        <option value="J">Jurídica</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCpfCnpjDiv">
+                                    <label for="svpaWebCpfCnpj">CPF/CNPJ*</label>
+                                    <input type="text" class="form-control" id="svpaWebCpfCnpj" name="svpaWebCpfCnpj" placeholder="Digite" maxlength="18">
+                                </div>
+
+                                <div class="form-group col-md-8" id="svpaWebProponenteDiv">
+                                    <label for="svpaWebProponente">Nome proponente*</label>
+                                    <input type="text" class="form-control" id="svpaWebProponente" name="svpaWebProponente" placeholder="Digite" maxlength="50">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebTipoEnderecoDiv">
+                                    <label for="svpaWebTipoEndereco">Tipo de endereço*</label>
+                                    <select class="form-control" id="svpaWebTipoEndereco" name="svpaWebTipoEndereco">
+                                        <option value="">Escolha</option>
+                                        <option value="R">Residência</option>
+                                        <option value="C">Comercial</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCepDiv">
+                                    <label for="svpaWebCep">Cep*</label>
+                                    <input type="text" class="form-control" id="svpaWebCep" name="svpaWebCep" placeholder="Digite" maxlength="8">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebLograduroDiv">
+                                    <label for="svpaWebLograduro">Logradouro*</label>
+                                    <input type="text" class="form-control" id="svpaWebLograduro" name="svpaWebLograduro" placeholder="Digite" maxlength="12">
+                                </div>
+
+                                <div class="form-group col-md-6" id="svpaWebEnderecoDiv">
+                                    <label for="svpaWebEndereco">Endereço*</label>
+                                    <input type="text" class="form-control" id="svpaWebEndereco" name="svpaWebEndereco" placeholder="Digite" maxlength="60">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebNumeroDiv">
+                                    <label for="svpaWebNumero">Número endereço*</label>
+                                    <input type="text" class="form-control" id="svpaWebNumero" name="svpaWebNumero" placeholder="Digite" maxlength="5">
+                                </div>
+                                <div class="form-group col-md-4" id="svpaWebComplementoDiv">
+                                    <label for="svpaWebComplemento">Complemento*</label>
+                                    <input type="text" class="form-control" id="svpaWebComplemento" name="svpaWebComplemento" placeholder="Digite" maxlength="60">
+                                </div>
+                                <div class="form-group col-md-6" id="svpaWebBairroDiv">
+                                    <label for="svpaWebBairro">Bairro*</label>
+                                    <input type="text" class="form-control" id="svpaWebBairro" name="svpaWebBairro" placeholder="Digite" maxlength="30">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6" id="svpaWebCidadeDiv">
+                                    <label for="svpaWebCidade">Cidade*</label>
+                                    <input type="text" class="form-control" id="svpaWebCidade" name="svpaWebCidade" placeholder="Digite" maxlength="30">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebUfDiv">
+                                    <label for="svpaWebUf">UF*</label>
+                                    <input type="text" class="form-control" id="svpaWebUf" name="svpaWebUf" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebTelFixoDiv">
+                                    <label for="svpaWebTelFixo">Telefone fixo*</label>
+                                    <input type="tel" class="form-control" id="svpaWebTelFixo" name="svpaWebTelFixo" placeholder="Digite" maxlength="11">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCelularDiv">
+                                    <label for="svpaWebCelular">Celular*</label>
+                                    <input type="tel" class="form-control" id="svpaWebCelular" name="svpaWebCelular" placeholder="Digite" maxlength="11">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-8" id="svpaWebEmailDiv">
+                                    <label for="svpaWebEmail">E-mail*</label>
+                                    <input type="tel" class="form-control" id="svpaWebEmail" name="svpaWebEmail" placeholder="Digite" maxlength="40">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="veiculo">
+
+                    <div class="panel panel-default box">
+                        <div class="panel-heading">Veículo</div>
+
+                        <div class="panel-body back02">
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebChassiDiv">
+                                    <label for="svpaWebChassi">Chassi*</label>
+                                    <input type="number" class="form-control" id="svpaWebChassi" name="svpaWebChassi" placeholder="Digite" maxlength="17">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebTipoVeiculoDiv">
+                                    <label for="svpaWebTipoVeiculo">Tipo de veículo*</label>
+                                    <select class="form-control" id="svpaWebTipoVeiculo" name="svpaWebTipoVeiculo">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Passeio</option>
+                                        <option value="2">Frete</option>
+                                        <option value="3">Taxi</option>
+                                    </select>
+                                    <!--vide tabela-->
+                                </div>
+
+                                <div class="form-group col-md-3" id="svpaWebOriginalCopiaDocDiv">
+                                    <label for="svpaWebOriginalCopiaDoc">Original ou cópia do documento*</label>
+                                    <select class="form-control" id="svpaWebOriginalCopiaDoc"  name="svpaWebOriginalCopiaDoc">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-5" id="svpaWebPropietarioDiv">
+                                    <label for="svpaWebPropietario">Nome do proprietário*</label>
+                                    <input type="text" class="form-control" id="svpaWebPropietario" name="svpaWebPropietario" placeholder="Digite" maxlength="50">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebTipoPessoaProprietarioDiv">
+                                    <label for="svpaWebTipoPessoaProprietario">Tipo pessoa proprietário*</label>
+                                    <select class="form-control" id="svpaWebTipoPessoaProprietario" name="svpaWebTipoPessoaProprietario">
+                                        <option value="">Escolha</option>
+                                        <option value="F">Física</option>
+                                        <option value="J">Jurídica</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCpfCnpjProppietarioDiv">
+                                    <label for="svpaWebCpfCnpjProppietario">CPF/CNPJ proprietário*</label>
+                                    <input type="text" class="form-control" id="svpaWebCpfCnpjProppietario" name="svpaWebCpfCnpjProppietario" placeholder="Digite" maxlength="18">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebRenavamDiv">
+                                    <label for="svpaWebRenavam">Renavam*</label>
+                                    <input type="text" class="form-control" id="svpaWebRenavam" name="svpaWebRenavam" placeholder="Digite" maxlength="11">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebTipoDocumentoDiv">
+                                    <label for="svpaWebTipoDocumento">Documento apresentado*</label>
+                                    <select class="form-control" id="svpaWebTipoDocumento" name="svpaWebTipoDocumento">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Dut</option>
+                                        <option value="2">Nota Fiscal</option>
+                                        <!--Vide Tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebDutDocNfDiv">
+                                    <label for="svpaWebDutDocNf">Documento dut nota fiscal*</label>
+                                    <input type="text" class="form-control" id="svpaWebDutDocNf" name="svpaWebDutDocNf" placeholder="Digite" maxlength="12">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebExercicioDocDiv">
+                                    <label for="svpaWebExercicioDoc">Exercício documento</label>
+                                    <input type="number" class="form-control" id="svpaWebExercicioDoc" name="svpaWebExercicioDoc" placeholder="Digite" maxlength="4">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebDataDocDiv">
+                                    <label for="svpaWebDataDoc">Data documento</label>
+                                    <input type="date" class="form-control" id="svpaWebDataDoc" name="svpaWebDataDoc" placeholder="dd/mm/aaaa" maxlength="10">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebDataDocSaidaDiv">
+                                    <label for="svpaWebDataDocSaida">Data de saída documento</label>
+                                    <input type="date" class="form-control" id="svpaWebDataDocSaida" name="svpaWebDataDocSaida" placeholder="dd/mm/aaaa" maxlength="10">
+                                </div>
+
+                                <div class="form-group col-md-6" id="svpaWebRevendaDiv">
+                                    <label for="svpaWebRevenda">Revenda</label>
+                                    <input type="text" class="form-control" id="svpaWebRevenda" name="svpaWebRevenda" placeholder="Digite" maxlength="40">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebTelRevendaDiv">
+                                    <label for="svpaWebTelRevenda">Telefone revenda</label>
+                                    <input type="tel" class="form-control" id="svpaWebTelRevenda" name="svpaWebTelRevenda" placeholder="Digite" maxlength="11">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebAlienadoDiv">
+                                    <label for="svpaWebAlienado">Alienado*</label>
+                                    <select class="form-control" id="svpaWebAlienado" name="svpaWebAlienado">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebAlienadoADiv">
+                                    <label for="svpaWebAlienadoA">Alienado a</label>
+                                    <input type="tel" class="form-control" id="svpaWebAlienadoA" name="svpaWebAlienadoA" placeholder="Digite" maxlength="30">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebRestricaoDiv">
+                                    <label for="svpaWebRestricao">Restição*</label>
+                                    <select class="form-control" id="svpaWebRestricao" name="svpaWebRestricao">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label for="svpaWebDescRestricao">Descrição da restrição</label>
+                                    <input type="text" class="form-control" id="svpaWebDescRestricao" name="svpaWebDescRestricao" placeholder="Digite" maxlength="30">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-2" id="svpaWebSalvadoDiv">
+                                    <label for="svpaWebSalvado">Salvado*</label>
+                                    <select class="form-control" id="svpaWebSalvado" name="svpaWebSalvado">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCrlvDiv">
+                                    <label for="svpaWebCrlv">CRLV*</label>
+                                    <input type="text" class="form-control" id="svpaWebCrlv" name="svpaWebCrlv" placeholder="Digite" maxlength="11">
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebCrlvMunicipioDiv">
+                                    <label for="svpaWebCrlvMunicipio">CRLV município*</label>
+                                    <input type="text" class="form-control" id="svpaWebCrlvMunicipio" name="svpaWebCrlvMunicipio" placeholder="Digite" maxlength="30">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCrlvUfDiv">
+                                    <label for="svpaWebCrlvUf">CRLV UF*</label>
+                                    <input type="text" class="form-control" id="svpaWebCrlvUf" name="svpaWebCrlvUf" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCodFipeDiv">
+                                    <label for="svpaWebCodFipe">Código FIPE</label>
+                                    <input type="text" class="form-control" id="svpaWebCodFipe" name="svpaWebCodFipe" placeholder="Digite" maxlength="10">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+								
+								<div class="form-group col-md-2" id="svpaWebCodVeiculoDiv">
+                                    <label for="svpaWebCodVeiculo">Código veículo</label>
+                                    <input type="text" class="form-control" id="svpaWebCodVeiculo" name="svpaWebCodVeiculo" placeholder="Digite" maxlength="10">
+                                </div>
+								
+                                <div class="form-group col-md-2" id="svpaWebMarcaVeiculoDiv">
+                                    <label for="svpaWebMarcaVeiculo">Marca veículo*</label>
+                                    <input type="text" class="form-control" id="svpaWebMarcaVeiculo" name="svpaWebMarcaVeiculo" placeholder="Digite" maxlength="20">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebModeloVeiculoDiv">
+                                    <label for="svpaWebModeloVeiculo">Modelo veículo*</label>
+                                    <input type="text" class="form-control" id="svpaWebModeloVeiculo" name="svpaWebModeloVeiculo" placeholder="Digite" maxlength="20">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebAnoFabricacaoDiv">
+                                    <label for="svpaWebAnoFabricacao">Ano fabricação*</label>
+                                    <input type="text" class="form-control" id="svpaWebAnoFabricacao" name="svpaWebAnoFabricacao" placeholder="Digite" maxlength="4">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebAnoModeloDiv">
+                                    <label for="svpaWebAnoModelo">Ano modelo*</label>
+                                    <input type="text" class="form-control" id="svpaWebAnoModelo" name="svpaWebAnoModelo" placeholder="Digite" maxlength="4">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCodCapacidadeDiv">
+                                    <label for="svpaWebCodCapacidade">Cód capacidade veículo</label>
+                                    <select class="form-control" id="svpaWebCodCapacidade" name="svpaWebCodCapacidade">
+                                        <option value="">Escolha</option>
+                                        <option value="">1 - 5 Pass</option>
+                                        <option value="">2 - 1 Ton</option>
+                                        <option value="">3 - 5 Ton</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebCapacidadeDiv">
+                                    <label for="svpaWebCapacidade">Capacidade veículo*</label>
+                                    <input type="text" class="form-control" id="svpaWebCapacidade" name="svpaWebCapacidade" placeholder="Digite" maxlength="10">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebPotenciaDiv">
+                                    <label for="svpaWebPotencia">Potência*</label>
+                                    <input type="number" class="form-control" id="svpaWebPotencia" name="svpaWebPotencia" placeholder="Digite" maxlength="4">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCilindradaDiv">
+                                    <label for="svpaWebCilindrada">Cilindrada*</label>
+                                    <input type="number" class="form-control" id="svpaWebCilindrada" name="svpaWebCilindrada" placeholder="Digite" maxlength="4">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCodCombustivelDiv">
+                                    <label for="svpaWebCodCombustivel">Código combustível*</label>
+                                    <select class="form-control" id="svpaWebCodCombustivel" name="svpaWebCodCombustivel">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Gasolina</option>
+                                        <option value="2">Álcool</option>
+                                        <option value="3">Diesel</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2">
+                                    <label for="svpaWebCodCor">Código cor</label>
+                                    <select class="form-control" id="svpaWebCodCor" name="svpaWebCodCor">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Branco</option>
+                                        <option value="2">Preto</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCorDiv">
+                                    <label for="svpaWebCor">Cor*</label>
+                                    <input type="text" class="form-control" id="svpaWebCor" name="svpaWebCor" placeholder="Digite" maxlength="20">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebTipoPinturaDiv">
+                                    <label for="svpaWebTipoPintura">Tipo pintura*</label>
+                                    <select class="form-control" id="svpaWebTipoPintura" name="svpaWebTipoPintura">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Comum</option>
+                                        <option value="2">Metálica</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebPlacaDiv">
+                                    <label for="svpaWebPlaca">Placa*</label>
+                                    <input type="text" class="form-control" id="svpaWebPlaca" name="svpaWebPlaca" placeholder="Digite" maxlength="9">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCodMunicipioDiv">
+                                    <label for="svpaWebCodMunicipio">Código município</label>
+                                    <input type="text" class="form-control" id="svpaWebCodMunicipio" name="svpaWebCodMunicipio" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebUfTargejaDiv">
+                                    <label for="svpaWebUfTargeja">UF*</label>
+                                    <select class="form-control" id="svpaWebUfTargeja" name="svpaWebUfTargeja">
+                                        <option value="">Escolha</option>
+                                        <option value="AC">AC</option>
+                                        <option value="AM">AM</option>
+                                        <option value="AP">AP</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebMunicipioTargejaDiv">
+                                    <label for="svpaWebMunicipioTargeja">Município*</label>
+                                    <input type="text" class="form-control" id="svpaWebMunicipioTargeja" name="svpaWebMunicipioTargeja" placeholder="Digite" maxlength="30">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebAnoTarjetaDiv">
+                                    <label for="svpaWebAnoTarjeta">Ano placa*</label>
+                                    <input type="number" class="form-control" id="svpaWebAnoTarjeta" name="svpaWebAnoTarjeta" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebLacreTarjetaDiv">
+                                    <label for="svpaWebLacreTarjeta">Lacre placa*</label>
+                                    <input type="text" class="form-control" id="svpaWebLacreTarjeta" name="svpaWebLacreTarjeta" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCodCatPlacaDiv">
+                                    <label for="svpaWebCodCatPlaca">Categoria placa*</label>
+                                    <select class="form-control" id="svpaWebCodCatPlaca" name="svpaWebCodCatPlaca">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Cinza</option>
+                                        <option value="2">Vermelha</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebNumMotorDiv">
+                                    <label for="svpaWebNumMotor">Número motor*</label>
+                                    <input type="text" class="form-control" id="svpaWebNumMotor" name="svpaWebNumMotor" placeholder="Digite" maxlength="25">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebVazamentoDiv">
+                                    <label for="svpaWebVazamento">Vazamento motor*</label>
+                                    <select class="form-control" id="svpaWebVazamento" name="svpaWebVazamento">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Sem vazamento</option>
+                                        <option value="2">Com vazamento</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebGravChassiDiv">
+                                    <label for="svpaWebGravChassi">Gravação chassi*</label>
+                                    <select class="form-control" id="svpaWebGravChassi" name="svpaWebGravChassi">
+                                        <option value="">Escolha</option>
+                                        <option value="0">Falta</option>
+                                        <option value="1">Ok</option>
+                                        <option value="2">Desalinhado</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebEtiqAssoalhoDiv">
+                                    <label for="svpaWebEtiqAssoalho">Etiqueta assoalho*</label>
+                                    <select class="form-control" id="svpaWebEtiqAssoalho" name="svpaWebEtiqAssoalho">
+                                        <option value="">Escolha</option>
+                                        <option value="0">Falta</option>
+                                        <option value="1">Ok</option>
+                                        <option value="2">Desalinhado</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebEtiqColunaDiv">
+                                    <label for="svpaWebEtiqColuna">Etiqueta coluna*</label>
+                                    <select class="form-control" id="svpaWebEtiqColuna" name="svpaWebEtiqColuna">
+                                        <option value="">Escolha</option>
+                                        <option value="0">Falta</option>
+                                        <option value="1">Ok</option>
+                                        <option value="2">Desalinhado</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebEtiqCompMotorDiv">
+                                    <label for="svpaWebEtiqCompMotor">Etiqueta comp do motor*</label>
+                                    <select class="form-control" id="svpaWebEtiqCompMotor" name="svpaWebEtiqCompMotor">
+                                        <option value="">Escolha</option>
+                                        <option value="0">Falta</option>
+                                        <option value="1">Ok</option>
+                                        <option value="2">Desalinhado</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebPlaquetaDiv">
+                                    <label for="svpaWebPlaqueta">Plaqueta*</label>
+                                    <select class="form-control" id="svpaWebPlaqueta" name="svpaWebPlaqueta">
+                                        <option value="">Escolha</option>
+                                        <option value="0">Falta</option>
+                                        <option value="1">Ok</option>
+                                        <option value="2">Desalinhado</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebPlaquetaCarroceriaDiv">
+                                    <label for="svpaWebPlaquetaCarroceria">Plaqueta carroceria*</label>
+                                    <select class="form-control" id="svpaWebPlaquetaCarroceria" name="svpaWebPlaquetaCarroceria">
+                                        <option value="">Escolha</option>
+                                        <option value="0">Falta</option>
+                                        <option value="1">Ok</option>
+                                        <option value="2">Desalinhado</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebGravNumMotorDiv">
+                                    <label for="svpaWebGravNumMotor">Gravação núm do motor*</label>
+                                    <select class="form-control" id="svpaWebGravNumMotor" name="svpaWebGravNumMotor">
+                                        <option value="">Escolha</option>
+                                        <option value="0">Falta</option>
+                                        <option value="1">Ok</option>
+                                        <option value="2">Desalinhado</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebGravVidrosDiv">
+                                    <label for="svpaWebGravVidros">Gravaçâo vidros*</label>
+                                    <select class="form-control" id="svpaWebGravVidros" name="svpaWebGravVidros">
+                                        <option value="">Escolha</option>
+                                        <option value="0">Falta</option>
+                                        <option value="1">Ok</option>
+                                        <option value="2">Desalinhado</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebRebaixadoDiv">
+                                    <label for="svpaWebRebaixado">Rebaixado*</label>
+                                    <select class="form-control" id="svpaWebRebaixado" name="svpaWebRebaixado">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebAlturaDianteiraDiv">
+                                    <label for="svpaWebAlturaDianteira">Altura dianteira</label>
+                                    <input type="number" class="form-control" id="svpaWebAlturaDianteira" name="svpaWebAlturaDianteira" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebAlturaTraseiraDiv">
+                                    <label for="svpaWebAlturaTraseira">Altura traseira</label>
+                                    <input type="number" class="form-control" id="svpaWebAlturaTraseira" name="svpaWebAlturaTraseira" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebVeiculoTransformadoDiv">
+                                    <label for="svpaWebVeiculoTransformado">Veículo transformado*</label>
+                                    <select class="form-control" id="svpaWebVeiculoTransformado" name="svpaWebVeiculoTransformado">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-6" id="svpaWebTransformacaoDiv">
+                                    <label for="svpaWebTransformacao">Transformação</label>
+                                    <input type="text" class="form-control" id="svpaWebTransformacao" name="svpaWebTransformacao" placeholder="Digite" maxlength="60">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebTerceiroEixoDiv">
+                                    <label for="svpaWebTerceiroEixo">Terceiro eixo*</label>
+                                    <select class="form-control" id="svpaWebTerceiroEixo" name="svpaWebTerceiroEixo">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebNumTerceiroEixoDiv">
+                                    <label for="svpaWebNumTerceiroEixo">Número terceiro eixo</label>
+                                    <input type="text" class="form-control" id="svpaWebNumTerceiroEixo" name="svpaWebNumTerceiroEixo" placeholder="Digite" maxlength="30">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebQtdEixoDianteiroDiv">
+                                    <label for="svpaWebQtdEixoDianteiro">Quant eixo dianteiro*</label>
+                                    <input type="number" class="form-control" id="svpaWebQtdEixoDianteiro" name="svpaWebQtdEixoDianteiro" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebQtdEixoTraseiroDiv">
+                                    <label for="svpaWebQtdEixoTraseiro">Quant eixo traseiro*</label>
+                                    <input type="number" class="form-control" id="svpaWebQtdEixoTraseiro" name="svpaWebQtdEixoTraseiro" placeholder="Digite" maxlength="2">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCodTracaoDiv">
+                                    <label for="svpaWebCodTracao">Tração*</label>
+                                    <select class="form-control" id="svpaWebCodTracao" name="svpaWebCodTracao">
+                                        <option value="">Escolha</option>
+                                        <option value="1">4x2</option>
+                                        <option value="2">4x4</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebMarcaCarroceriaDiv">
+                                    <label for="svpaWebMarcaCarroceria">Marca carroceria</label>
+                                    <input type="number" class="form-control" id="svpaWebMarcaCarroceria" name="svpaWebMarcaCarroceria" placeholder="Digite" maxlength="3">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCodTipoCarroceriaDiv">
+                                    <label for="svpaWebCodTipoCarroceria">Tipo carroceria*</label>
+                                    <select class="form-control" id="svpaWebCodTipoCarroceria" name="svpaWebCodTipoCarroceria">
+                                        <option value="">Escolha</option>
+                                        <option value="1">Passeio</option>
+                                        <option value="2">Madeira</option>
+                                        <option value="3">Alumínio</option>
+                                        <!--vide tabela-->
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-4" id="svpaWebNumCarroceriaDiv">
+                                    <label for="svpaWebNumCarroceria">Número carroceria</label>
+                                    <input type="text" class="form-control" id="svpaWebNumCarroceria" name="svpaWebNumCarroceria" placeholder="Digite" maxlength="30">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="vistoria">
+
+                    <div class="panel panel-default box">
+                        <div class="panel-heading">Vistoria</div>
+
+                        <div class="panel-body back02">
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebCodPostoDiv">
+                                    <label for="svpaWebCodPosto">Código posto</label>
+                                    <input type="text" class="form-control" id="svpaWebCodPosto" name="svpaWebCodPosto" placeholder="Digite" maxlength="5">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCodVistoriadorDiv">
+                                    <label for="svpaWebCodVistoriador">Código vistoriador*</label>
+                                    <input type="text" class="form-control" id="svpaWebCodVistoriador" name="svpaWebCodVistoriador" placeholder="Digite" maxlength="5">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebHoraTerminoDiv">
+                                    <label for="svpaWebHoraTermino">Hora término*</label>
+                                    <input type="time" class="form-control" id="svpaWebHoraTermino" name="svpaWebHoraTermino" placeholder="Digite" maxlength="5">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebCpfRespApresVeiculoDiv">
+                                    <label for="svpaWebCpfRespApresVeiculo">CPF responsável*</label>
+                                    <input type="number" class="form-control" id="svpaWebCpfRespApresVeiculo" name="svpaWebCpfRespApresVeiculo" placeholder="Digite" maxlength="12">
+                                </div>
+
+                                <div class="form-group col-md-4" id="svpaWebNomeRespApresVeiculoDiv">
+                                    <label for="svpaWebNomeRespApresVeiculo">Nome responsável*</label>
+                                    <input type="text" class="form-control" id="svpaWebNomeRespApresVeiculo" name="svpaWebNomeRespApresVeiculo" placeholder="Digite" maxlength="40">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-12" id="svpaWebObservacaoDiv">
+                                    <label for="svpaWebObservacao">Observação</label>
+                                    <textarea class="form-control" rows="6" id="svpaWebObservacao" name="svpaWebObservacao" placeholder="Digite" maxlength="400"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-6" id="svpaWebCodRemessaCiaDiv">
+                                    <label for="svpaWebCodRemessaCia">Código Remessa CIA</label>
+                                    <input type="text" class="form-control" id="svpaWebCodRemessaCia" name="svpaWebCodRemessaCia" placeholder="Digite" maxlength="20">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebNumProtocoloDiv">
+                                    <label for="svpaWebNumProtocolo">Número do protocolo</label>
+                                    <input type="text" class="form-control" id="svpaWebNumProtocolo" name="svpaWebNumProtocolo" placeholder="Digite" maxlength="10">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebAnalisadaDiv">
+                                    <label for="svpaWebAnalisada">Analisada</label>
+                                    <select class="form-control" id="svpaWebAnalisada" name="svpaWebAnalisada">
+                                        <option value="">Escolha</option>
+                                        <option value="S">Sim</option>
+                                        <option value="N">Não</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebDataAnaliseDiv">
+                                    <label for="svpaWebDataAnalise">Data Análise</label>
+                                    <input type="date" class="form-control" id="svpaWebDataAnalise" name="svpaWebDataAnalise" placeholder="dd/mm/aaaa" maxlength="10">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-2" id="svpaWebStVistoriaDiv">
+                                    <label for="svpaWebStVistoria">Status Vistoria</label>
+                                    <select class="form-control" id="svpaWebStVistoria" name="svpaWebStVistoria">
+                                        <option value="">Escolha</option>
+                                        <option value="A">Aceitável</option>
+                                        <option value="R">Recusável</option>
+                                        <option value="S">Sujeito a análise</option>
+                                    </select>
+                                    <!--vide tabela-->
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebStSvpaDiv">
+                                    <label for="svpaWebStSvpa">Status SVPA</label>
+                                    <select class="form-control" id="svpaWebStSvpa" name="svpaWebStSvpa">
+                                        <option value="">Escolha</option>
+                                        <option value="A">Analisada</option>
+                                        <option value="T">Transmitida</option>
+                                        <option value="S">Supervisão</option>
+                                        <option value="F">Fotos</option>
+                                    </select>
+                                    <!--vide tabela-->
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebStFaturamentoDiv">
+                                    <label for="svpaWebStFaturamento">Status Faturamento</label>
+                                    <select class="form-control" id="svpaWebStFaturamento" name="svpaWebStFaturamento">
+                                        <option value="">Escolha</option>
+                                        <option value="A">A faturar</option>
+                                        <option value="F">Faturada</option>
+                                        <option value="R">Recusada</option>
+                                    </select>
+                                    <!--vide tabela-->
+                                </div>
+
+                                <div class="form-group col-md-3" id="svpaWebTensapBatDesDiv">
+                                    <label for="svpaWebTensapBatDes">Tensão Bateria Desligado</label>
+                                    <input type="text" class="form-control" id="svpaWebTensapBatDes" name="svpaWebDataAnalise" placeholder="Digite" maxlength="5">
+                                </div>
+
+                                <div class="form-group col-md-3" id="svpaWebTensapBatLigDiv">
+                                    <label for="svpaWebTensapBatLig">Tensão Bateria Ligado</label>
+                                    <input type="text" class="form-control" id="svpaWebTensapBatLig" name="svpaWebTensapBatLig" placeholder="Digite" maxlength="5">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-6" id="svpaWebDadosCentralAutoDiv">
+                                    <label for="svpaWebDadosCentralAuto">Dados Central Automotiva</label>
+                                    <input type="text" class="form-control" id="svpaWebDadosCentralAuto" name="svpaWebDadosCentralAuto" placeholder="Digite" maxlength="20">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebLatitudeDiv">
+                                    <label for="svpaWebLatitude">Latitude</label>
+                                    <input type="text" class="form-control" id="svpaWebLatitude" name="svpaWebLatitude" placeholder="Digite" maxlength="20">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebLongitudeDiv">
+                                    <label for="svpaWebLongitude">Longitude</label>
+                                    <input type="text" class="form-control" id="svpaWebLongitude" name="svpaWebLongitude" placeholder="Digite" maxlength="20">
+                                </div>
+
+                                <div class="form-group col-md-2" id="svpaWebGpsVistoriaDiv">
+                                    <label for="svpaWebGpsVistoria">Posição GPS</label>
+                                    <input type="text" class="form-control" id="svpaWebGpsVistoria" name="svpaWebGpsVistoria" placeholder="Digite" maxlength="20">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+			
+
+
+        </div>
+
+    
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/teste.js"></script>
+
+
+</body>
+</html>
